@@ -51,3 +51,9 @@ try! doc.merge(other: doc2) // `doc` now contains {"colours": ["green", "red"]}
 For more details on the API, see the [Automerge-swift API documentation](https://automerge.org/automerge-swift/documentation/automerge/) and the articles within.
 
 > Note: There was an earlier project that provided Swift language bindings for Automerge. The repository was [renamed and archived](https://github.com/automerge/automerge-swift-archived), but is available if you are looking for it.
+
+## Platform support
+
+- Apple platforms use the bundled `automergeFFI.xcframework`.
+- WebAssembly consumers link the Rust static library manually; see `notes/WebAssembly.md`.
+- Windows builds follow the same manual linking approach; see `notes/Windows.md` for step-by-step instructions.

@@ -31,7 +31,7 @@ let package = Package(
                 ])),
                 // The dependency on _CAutomergeUniffi gives the WebAssembly linker a place to link in
                 // the automergeFFI target when the XCFramework binary target isn't available.
-                .target(name: "_CAutomergeUniffi", condition: .when(platforms: [.wasi, .linux])),
+                .target(name: "_CAutomergeUniffi", condition: .when(platforms: [.wasi, .linux, .windows])),
             ],
             path: "./AutomergeUniffi"
         ),
